@@ -28,7 +28,6 @@ site, measurement_id, site_id, person_id, visit_occurrence_id, provider_id
 7. Score the bmi table in the new schema
 '''
 def bmi_cleaning(): 
-    engine_local = create_engine('postgresql://pangx:pxq@130986pxq@reslnpbddb01.research.chop.edu:5432/pbd_cohort')
 
     ## sql query to select height records: Fliter out measurements: 1. measurement data < Date of birth, negative values and duplicates 
     bmi_sql = "SELECT ms.person_id, ms.gender_concept_id, ms.birth_datetime, ms.weight_kg weight, h.height_cm height, \

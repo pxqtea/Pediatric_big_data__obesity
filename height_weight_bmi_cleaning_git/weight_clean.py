@@ -25,7 +25,6 @@ site, measurement_id, site_id, person_id, visit_occurrence_id, provider_id
 7. Score the height table in the new schema
 '''
 def weight_cleaning(): 
-    engine_local = create_engine('postgresql://uname:pwd***@reslnpbddb01.research.chop.edu:5432/pbd_cohort')
 
     ## sql query to select weight records: Fliter out measurements: 1. measurement data < Date of birth, negative values and duplicates 
     weight_sql = "WITH weight_cnt AS (\

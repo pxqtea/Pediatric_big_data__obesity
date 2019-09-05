@@ -25,8 +25,6 @@ site, measurement_id, site_id, person_id, visit_occurrence_id, provider_id
 7. Score the height table in the new schema
 '''
 def height_cleaning(): 
-    engine_local = create_engine('postgresql://pangx:pxq@130986pxq@reslnpbddb01.research.chop.edu:5432/pbd_cohort')
-
     ## sql query to select height records: Fliter out measurements: 1. measurement data < Date of birth, negative values and duplicates 
     height_sql = "WITH height_cnt AS (\
                     SELECT distinct(ps.person_id, ms.measurement_date, ms.measurement_datetime, ms.value_source_value ) as dist_record, \

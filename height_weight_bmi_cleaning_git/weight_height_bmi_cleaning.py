@@ -25,7 +25,6 @@ site, measurement_id, site_id, person_id, visit_occurrence_id, provider_id
 7. Score the height table in the new schema
 '''
 def weight_cleaning(): 
-    engine_local = create_engine('postgresql://uname:pwd***@reslnpbddb01.research.chop.edu:5432/pbd_cohort')
 
     ## sql query to select weight records: Fliter out measurements: 1. measurement data < Date of birth, negative values and duplicates 
     weight_sql = "WITH weight_cnt AS (\
@@ -113,7 +112,6 @@ site, measurement_id, site_id, person_id, visit_occurrence_id, provider_id
 7. Score the height table in the new schema
 '''
 def height_cleaning(): 
-    engine_local = create_engine('postgresql://uname:pwd***@reslnpbddb01.research.chop.edu:5432/pbd_cohort')
 
     ## sql query to select height records: Fliter out measurements: 1. measurement data < Date of birth, negative values and duplicates 
     height_sql = "WITH height_cnt AS (\
@@ -203,7 +201,6 @@ site, measurement_id, site_id, person_id, visit_occurrence_id, provider_id
 7. Score the bmi table in the new schema
 '''
 def bmi_cleaning(): 
-    engine_local = create_engine('postgresql://uname:pwd***@reslnpbddb01.research.chop.edu:5432/pbd_cohort')
 
     ## sql query to select height records: Fliter out measurements: 1. measurement data < Date of birth, negative values and duplicates 
     bmi_sql = "SELECT ms.person_id, ms.gender_concept_id, ms.birth_datetime, ms.value_as_number weight, h.value_as_number height, \
